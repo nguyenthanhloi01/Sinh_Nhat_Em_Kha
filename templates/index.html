@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#d9e5e1">
+
+    <title>Happy Birthday Emm Kha</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <main class="scene">
+
+        <!-- LỜI CHÚC NẰM BÊN DƯỚI LỚP SƯƠNG -->
+        <section class="greeting" aria-label="Lời chúc ">
+            <p class="eyebrow">
+                19 THÁNG 10 · BIRTHDAY WITH KHA HUYNH
+            </p>
+
+            <h1>
+                Chúc mừng<br>
+                <span>sinh nhật Kha Huynh</span>
+            </h1>
+
+            <p class="message">
+                Chúc em Kha nhanh giàu
+            </p>
+
+            <p class="signature">
+                ✨Tối nay đi Bivina nhan ✨
+            </p>
+        </section>
+
+        <!-- HƯỚNG DẪN VÀ PHẦN TRĂM ĐÃ LAU -->
+        <div class="hint" id="hint" aria-live="polite">
+            ✨ chạm vào màn hình nhanh lên 
+            <span id="percent">0%</span>
+        </div>
+
+        <!-- CANVAS SƯƠNG -->
+        <canvas id="fogCanvas" aria-hidden="true"></canvas>
+
+        <!-- CANVAS PHÁO HOA VÀ BÓNG BAY -->
+        <canvas id="effectsCanvas" aria-hidden="true"></canvas>
+
+        <!-- CỤC TẨY PASTEL -->
+        <div id="eraser" aria-hidden="true">
+            <div class="eraser-body">
+                <div class="eraser-band"></div>
+                <div class="eraser-shine"></div>
+            </div>
+            <div class="eraser-sparkle">✦</div>
+        </div>
+
+        <!-- NÚT CHƠI LẠI -->
+        <button id="replayButton" type="button">
+            ↻ Chơi lại
+        </button>
+
+        <!-- NHẠC NỀN -->
+        <audio
+            id="backgroundMusic"
+            preload="auto"
+            loop
+            playsinline>
+            <source
+                src="{{ url_for('static', filename='audio/nhacsinhnhatemkha.mp3') }}"
+                type="audio/mpeg">
+        </audio>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
